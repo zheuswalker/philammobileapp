@@ -135,8 +135,9 @@ public class    fragment_home extends Fragment {
                         String pso_service_name = feedarray.getString("pso_service_name").trim();
                         String pso_service_desc = feedarray.getString("pso_service_desc").trim();
                         String pst_service_servicename = feedarray.getString("pst_service_servicename").trim();
+                        String pso_icon = feedarray.getString("pso_icon").trim();
 
-                        home_services_content_constructors current1 = new home_services_content_constructors(pso_service_name,pso_service_desc,pst_service_servicename);
+                        home_services_content_constructors current1 = new home_services_content_constructors(pso_service_name,pso_service_desc,pso_icon);
                         home_services_content_constructors.add(current1);
 
 

@@ -3,6 +3,7 @@ package redeye.ghostofwar.philamlife.Classes.Home;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -59,17 +61,10 @@ public class home_services_content_adapter extends RecyclerView.Adapter<home_ser
             }
         });
 
-        int selectedColor = Color.parseColor("#b8123e");
-        String td = feed_required_settergetter.pso_service_name().trim();
-        if(td.indexOf(" ")>0) {
-            td = td.substring(0, 1) + td.substring(td.indexOf(" "), td.indexOf(" ") + 2);
-            td=td.replace(" ","");
-        }
-        else
-            td = td.substring(0,1);
-        TextDrawable drawable1 = TextDrawable.builder()
-                .buildRound(td.toUpperCase(), selectedColor);
-        holder.serviceicon.setImageDrawable(drawable1);
+        Uri profilePicUri = Uri.parse("https://server.sympies.net/philamserver/PhilamServer/iconic/"+feed_required_settergetter.pso_icon());
+        Glide.with(context)
+                .load(profilePicUri)
+                .into(holder.serviceicon);
 
 
     }
