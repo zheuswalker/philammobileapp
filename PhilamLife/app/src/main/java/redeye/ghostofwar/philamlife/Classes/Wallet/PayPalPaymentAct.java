@@ -227,12 +227,13 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
         @Override
         protected String doInBackground(String... params) {
 
-            String reference = Base.BASE_URL+ EndPoints.PROFILEDETAILS;
+            String reference = Base.BASE_URL+ EndPoints.INSERTWALLET;
 
             String data ="";
             String email = params[0];
             String money = params[1];
-            String processtype = params[1];
+            String processtype = params[2];
+            String servicefee = params[3];
 
             try {
                 URL url = new URL(reference);
@@ -247,7 +248,8 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, StandardCharsets.UTF_8));
                 data = URLEncoder.encode("email","UTF-8")+"="+ URLEncoder.encode(email,"UTF-8")+"&"+
                         URLEncoder.encode("money","UTF-8")+"="+ URLEncoder.encode(money,"UTF-8")+"&"+
-                        URLEncoder.encode("processtype","UTF-8")+"="+ URLEncoder.encode(processtype,"UTF-8")
+                        URLEncoder.encode("processtype","UTF-8")+"="+ URLEncoder.encode(processtype,"UTF-8")+"&"+
+                        URLEncoder.encode("servicefee","UTF-8")+"="+ URLEncoder.encode(servicefee,"UTF-8")
                 ;
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
@@ -287,6 +289,12 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
 
         @Override
         protected void onPostExecute(String result) {
+            Log.d("resultsfromwebwallet",result);
+            if(result.trim().equals("true"))
+                Toast.makeText(ctx, "Cash in successfully.", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(ctx, "Cashin was unsuccessful , but no money is deducted to your account.", Toast.LENGTH_SHORT).show();
+
 
 
 
