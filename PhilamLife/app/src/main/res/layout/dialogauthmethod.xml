@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:text="Authentication Method"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:textAlignment="center"
+
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:text="Your device has a fingerprint scanner, instead of logging in next time , you can use your fingerprint to open your account and make transactions."
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:textAlignment="center"
+
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+
+        <Button
+            android:fontFamily="@font/opensansregular"
+            android:id="@+id/close"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#838080"
+            android:text="CLOSE"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

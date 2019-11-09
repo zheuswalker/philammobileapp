@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">PhilamLife</string>
+
+    // all of this
+    <string name="tittle">Welcome to Philam Life</string>
+    <string name="phone_email">\tHow would you like to be contacted?</string>
+    <string name="am_pm">\tWhen would you like to be contact?</string>
+    <string name="required">\t All fields are required, please dont leave any field blank.</string>
+    <string name="pass_var">\ I agree that all data above are correct </string>
+    <string name="varified">I authorized Philam life and its representatives to get in touch with me about their products and services.</string>
+    <string name="API_key">AIzaSyBZwMHN95o72R5355U-vL7WyhbjlRT-NJ8</string>
+    <string name="directionsApiKey">AIzaSyBZwMHN95o72R5355U-vL7WyhbjlRT-NJ8</string>
+    <string name="access_token">pk.eyJ1IjoiZXJ5bGdvIiwiYSI6ImNrMHM5YjVhaTAwYTAzY3Byb2xnb2QzNWsifQ.egNisBArBccooR5MJ-Myww</string>
+
+
 </resources>

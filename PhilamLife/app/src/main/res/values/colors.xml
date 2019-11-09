@@ -3,4 +3,56 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colors.senderbackground">#ffffff</color>
+    <color name="colors.recieverbackground">#e3e5e6</color>
+
+    <color name="colors.grey">#FCFCFC</color>
+    <color name="colors.logout">#ADB2B6</color>
+    <color name="colors.purple">#7c4ddf</color>
+    <color name="colors.yellow">#FFE74D</color>
+    <color name="colors.green">#24b08e</color>
+    <color name="colors.pink">#FF3F81</color>
+    <color name="colors.blue">#4262A4</color>
+    <color name="colors.orchid">#851881</color>
+    <color name="colors.teracota">#965F62</color>
+    <color name="colors.messages">#34484D</color>
+    <color name="colors.aquamarine">#24b08e</color>
+    <color name="colors.obelisk">#42A4DB</color>
+    <color name="colors.burg">#801600</color>
+    <color name="colors.malef">#F0F0F0</color>
+    <color name="colors.magnificent">#FE6C57</color>
+    <color name="colors.logolog">#E21773</color>
+    <color name="colors.underline">#F0F5FE</color>
+    <color name="colors.black">#949596</color>
+    <color name="colors.pureblack">#3C3C3C</color>
+    <color name="colors.pp">#949596</color>
+    <color name="colors.comp">#0D0C63</color>
+
+
+    <color name="mainthemecolor">#b8123e</color>
+
+    <color name="blue">#638bd4</color>
+    <color name="purple">#dc74e8</color>
+
+    <color name="black">#000000</color>
+    <color name="ccblue">#CC1859CF</color>
+    <color name="ccpurple">#CCD63BE9</color>
+
+    <color name="ssblue">#6E9DF3</color>
+    <color name="motif">#b8123e</color>
+
+    <color name="sspurple">#ED97F8</color>
+
+    <color name = "whitegrey">#72E6DED5</color>
+    <color name="grey">#F2615656</color>
+
+    <color name = "maroon">#D82727</color>
+    <color name = "maroonlight">#CCD82727</color>
+
+    <color name = "darkblue">#164551</color>
+    <color name = "lightblue">#CC164551</color>
+
+
+    <color name="signupedittextemail">#e9e9e9</color>
 </resources>
