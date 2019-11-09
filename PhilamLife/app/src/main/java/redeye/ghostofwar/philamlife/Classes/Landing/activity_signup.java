@@ -108,7 +108,7 @@ public class activity_signup extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
 
-            String reference = "https://server.sympies.net/philamserver/mobileinsertclientinfo.php";
+            String reference = "https://server.sympies.net/philamserver/PhilamServer/mobileinsertclientinfo.php";
             String data;
             try {
                 URL url = new URL(reference);

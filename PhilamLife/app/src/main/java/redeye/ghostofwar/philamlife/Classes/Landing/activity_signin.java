@@ -33,6 +33,7 @@ import java.nio.charset.StandardCharsets;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import redeye.ghostofwar.philamlife.Classes.Activity.overall_home_activity;
 import redeye.ghostofwar.philamlife.Classes.Configs.Base;
 import redeye.ghostofwar.philamlife.Classes.Configs.EndPoints;
 import redeye.ghostofwar.philamlife.R;
@@ -157,10 +158,10 @@ public class activity_signin extends AppCompatActivity {
                         editor.putString("session", email.getText().toString());
                         editor.apply();
 
-//                        Intent intent = new Intent(login.this, overall_home_activity.class);
-//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK&Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                        startActivity(intent);
-//                        dialogs.dismiss();
+                        Intent intent = new Intent(activity_signin.this, overall_home_activity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK&Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        dialogs.dismiss();
                         Toast.makeText(ctx, "Fingerprints in this device are now used to authorize future transactions.", Toast.LENGTH_SHORT).show();
                     }
                 });

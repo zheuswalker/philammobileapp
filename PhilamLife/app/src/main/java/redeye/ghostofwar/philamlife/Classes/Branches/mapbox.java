@@ -1,6 +1,7 @@
 package redeye.ghostofwar.philamlife.Classes.Branches;
 
 
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
@@ -252,7 +253,7 @@ public class mapbox extends AppCompatActivity implements OnMapReadyCallback, Loc
             @Override
             public void onClick(View v) {
                 NavigationLauncherOptions options = NavigationLauncherOptions.builder()
-                        .origin(Point.fromLngLat(121.088385, 14.710178))
+                        .origin(originPosition)
                         .destination(destinationPosition)
                         .shouldSimulateRoute(true)
                         .build();
@@ -333,11 +334,12 @@ public class mapbox extends AppCompatActivity implements OnMapReadyCallback, Loc
         destinationMarker = map.addMarker(new MarkerOptions().position(point));
 
         destinationPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());
-        originPosition = Point.fromLngLat(121.088385, 14.710178);
+        originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
         getRoute(originPosition, destinationPosition);
 
         navigate.setEnabled(true);
         navigate.setBackgroundResource(R.drawable.background);
+        navigate.setTextColor(Color.parseColor("#FFFFFF"));
     }
 
     private void getRoute(Point origin, Point destination) {
