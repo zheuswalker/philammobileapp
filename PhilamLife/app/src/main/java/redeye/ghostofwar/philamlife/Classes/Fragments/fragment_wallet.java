@@ -1,5 +1,6 @@
 package redeye.ghostofwar.philamlife.Classes.Fragments;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +18,11 @@ import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -31,6 +36,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -38,8 +45,12 @@ import me.aflak.libraries.callback.FingerprintDialogCallback;
 import me.aflak.libraries.dialog.FingerprintDialog;
 import redeye.ghostofwar.philamlife.Classes.Configs.Base;
 import redeye.ghostofwar.philamlife.Classes.Configs.EndPoints;
+import redeye.ghostofwar.philamlife.Classes.Home.home_services_content_adapter;
+import redeye.ghostofwar.philamlife.Classes.Home.home_services_content_constructors;
 import redeye.ghostofwar.philamlife.Classes.Landing.chooser;
 import redeye.ghostofwar.philamlife.Classes.Wallet.PayPalPaymentAct;
+import redeye.ghostofwar.philamlife.Classes.Wallet.wallet_cashprocess_adapter;
+import redeye.ghostofwar.philamlife.Classes.Wallet.wallet_cashprocess_constructors;
 import redeye.ghostofwar.philamlife.R;
 
 /**
@@ -49,6 +60,10 @@ import redeye.ghostofwar.philamlife.R;
 public class fragment_wallet extends Fragment  {
 
 
+    public static RecyclerView recyclerView;
+    public  static redeye.ghostofwar.philamlife.Classes.Wallet.wallet_cashprocess_adapter wallet_cashprocess_adapter;
+    public  static List<redeye.ghostofwar.philamlife.Classes.Wallet.wallet_cashprocess_constructors> wallet_cashprocess_constructors =new ArrayList<>();
+
     CardView cashin;
     Context context;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -57,6 +72,15 @@ public class fragment_wallet extends Fragment  {
         final View rootView = inflater.inflate(R.layout.layout_wallet_holder, container, false);
         cashin = rootView.findViewById(R.id.cashin);
         context = getContext();
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        final String name = preferences.getString("session", "");
+
+        new getServices(context).execute(name);
+        recyclerView = rootView.findViewById(R.id.wallethistory);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         cashin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,11 +102,9 @@ public class fragment_wallet extends Fragment  {
                                 EditText cashinprice = dialogs.findViewById(R.id.cashinprice);
                                 Intent intent = new Intent(getContext(), PayPalPaymentAct.class);
 
-                                final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-                                String name = preferences.getString("session", "");
 
                                 intent.putExtra("email",name);
-                                intent.putExtra("processtype",0);
+                                intent.putExtra("processtype","0");
                                 intent.putExtra("cashinprice",cashinprice.getText().toString());
                                 startActivity(intent);
 
@@ -117,6 +139,115 @@ public class fragment_wallet extends Fragment  {
 
     }
 
+
+    public class getServices extends AsyncTask<String, Void, String> {
+        AlertDialog alertDialog;
+        Context ctx;
+        getServices(Context ctx){
+            this.ctx = ctx;
+        }
+        @Override
+        protected String doInBackground(String... params) {
+
+            String reference = Base.BASE_URL+ EndPoints.PHILAMSERVICES;
+
+            String data ="";
+
+            String email = params[0];
+            try {
+                URL url = new URL(reference);
+                HttpsURLConnection httpURLConnection = (HttpsURLConnection)url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(false);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, StandardCharsets.UTF_8));
+                data = URLEncoder.encode("email","UTF-8")+"="+ URLEncoder.encode(email,"UTF-8");
+                ;
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.ISO_8859_1));
+                String response = "";
+                String line = "";
+                while ((line = bufferedReader.readLine())!=null)
+                {
+                    response+= line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return response;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return  null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+        }
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+
+            wallet_cashprocess_constructors.clear();
+            JSONObject feedcontentvalues = null;
+
+            try {
+
+                feedcontentvalues = new JSONObject(result);
+
+                try {
+                    JSONArray feedvalues = feedcontentvalues.getJSONArray("wallethistory");
+
+                    for (int i=0; i < feedvalues.length(); i++)
+                    {
+                        JSONObject feedarray = feedvalues.getJSONObject(i);
+                        String pw_processedmoney = feedarray.getString("pw_processedmoney").trim();
+                        String pw_processtype = feedarray.getString("pw_processtype").trim();
+                        String pw_processdate = feedarray.getString("pw_processdate").trim();
+                        String pw_processfee = feedarray.getString("pw_processfee").trim();
+
+                        redeye.ghostofwar.philamlife.Classes.Wallet.wallet_cashprocess_constructors current1 = new wallet_cashprocess_constructors(pw_processedmoney,pw_processtype,pw_processdate,pw_processfee);
+                        wallet_cashprocess_constructors.add(current1);
+
+
+
+
+                    }
+                    wallet_cashprocess_adapter = new wallet_cashprocess_adapter(context, wallet_cashprocess_constructors);
+                    recyclerView.setAdapter(null);
+                    recyclerView.setAdapter(wallet_cashprocess_adapter);
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            } catch(JSONException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+
+
+
+    }
 
 
 

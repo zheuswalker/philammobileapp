@@ -133,7 +133,7 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
                     String email  = getIntent().getStringExtra("email");
                     String money = getIntent().getStringExtra("cashinprice");
                     String processtype = getIntent().getStringExtra("processtype");
-                    new insertwallet(context).execute(email,money,processtype);
+                    new insertwallet(context).execute(email,money,processtype,"10");
 
 
                     Toast.makeText(context, "Cash In Successful.", Toast.LENGTH_SHORT).show();
@@ -289,7 +289,8 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
 
         @Override
         protected void onPostExecute(String result) {
-            Log.d("resultsfromwebwallet",result);
+
+            Log.d("resulwallet",result);
             if(result.trim().equals("true"))
                 Toast.makeText(ctx, "Cash in successfully.", Toast.LENGTH_SHORT).show();
             else
