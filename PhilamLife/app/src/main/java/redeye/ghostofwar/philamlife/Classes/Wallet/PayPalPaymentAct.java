@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,10 +24,25 @@ import com.paypal.android.sdk.payments.PaymentConfirmation;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import redeye.ghostofwar.philamlife.Classes.Activity.overall_home_activity;
+import redeye.ghostofwar.philamlife.Classes.Configs.Base;
+import redeye.ghostofwar.philamlife.Classes.Configs.EndPoints;
 import redeye.ghostofwar.philamlife.R;
 
 
@@ -112,6 +130,10 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
                 PaymentConfirmation confirm = data
                         .getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
                 if (confirm != null) {
+                    String email  = getIntent().getStringExtra("email");
+                    String money = getIntent().getStringExtra("cashinprice");
+                    String processtype = getIntent().getStringExtra("processtype");
+                    new insertwallet(context).execute(email,money,processtype);
 
 
                     Toast.makeText(context, "Cash In Successful.", Toast.LENGTH_SHORT).show();
@@ -196,5 +218,85 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
     public void onClick(View view) {
 
     }
+
+    public class insertwallet extends AsyncTask<String, Void, String> {
+        Context ctx;
+        insertwallet(Context ctx){
+            this.ctx = ctx;
+        }
+        @Override
+        protected String doInBackground(String... params) {
+
+            String reference = Base.BASE_URL+ EndPoints.PROFILEDETAILS;
+
+            String data ="";
+            String email = params[0];
+            String money = params[1];
+            String processtype = params[1];
+
+            try {
+                URL url = new URL(reference);
+                HttpsURLConnection httpURLConnection = (HttpsURLConnection)url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(false);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+                String name = preferences.getString("session", "");
+
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, StandardCharsets.UTF_8));
+                data = URLEncoder.encode("email","UTF-8")+"="+ URLEncoder.encode(email,"UTF-8")+"&"+
+                        URLEncoder.encode("money","UTF-8")+"="+ URLEncoder.encode(money,"UTF-8")+"&"+
+                        URLEncoder.encode("processtype","UTF-8")+"="+ URLEncoder.encode(processtype,"UTF-8")
+                ;
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.ISO_8859_1));
+                String response = "";
+                String line = "";
+                while ((line = bufferedReader.readLine())!=null)
+                {
+                    response+= line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return response;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return  null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+        }
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+
+
+
+
+
+        }
+
+
+
+    }
+
 
 }
