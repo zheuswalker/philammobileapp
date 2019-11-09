@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="redeye.ghostofwar.philamlife">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,18 +14,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Classes.Landing.Landing"></activity>
-        <activity android:name=".Classes.Landing.activity_signup">
+        <activity android:name=".Classes.ServicesOffered.ProductsOffered" />
+        <activity android:name=".Classes.Landing.password_confirm" />
+        <activity android:name=".Classes.Landing.forgot_password" />
+        <activity android:name=".Classes.Landing.activity_signin" />
+        <activity android:name=".Classes.Landing.activity_signup" />
+        <activity android:name=".Classes.Landing.chooser">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".Classes.activity_signin">
+        <activity android:name=".Classes.Activity.overall_home_activity">
 
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
+        <activity android:name=".Classes.ServicesOffered.services_fulldetails" />
+        <activity android:name=".Classes.Wallet.PayPalPaymentAct"            />
+        <activity android:name=".Classes.Branches.mapbox" />
+
+        <activity
+            android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/FinestWebViewTheme.Light" />
+
     </application>
 
 </manifest>

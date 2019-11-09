@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.core.widget.NestedScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+      <LinearLayout
+          android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:src="@drawable/philamlogo"
+              android:layout_marginBottom="5dp"
+              />
+          <TextView
+              android:layout_marginTop="20dp"
+              android:textStyle="bold"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="20dp"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="20dp"
+              android:textColor="@color/black"
+              android:textAlignment="textStart"
+              android:text="Sign Up"
+              android:fontFamily="@font/proxima"
+              />
+          <TextView
+
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="12dp"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="20dp"
+              android:layout_marginBottom="20dp"
+              android:textColor="@color/black"
+              android:textAlignment="textStart"
+              android:text="and be a part of a great community"
+              android:fontFamily="@font/proxima"
+              />
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:elevation="5dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Full Name "
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/fullname"
+                    android:background="@drawable/rectangle_signup_edittext_email"
+                    android:textSize="12dp"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/karla"
+                    android:drawableLeft="@drawable/ic_person_image"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="John Doe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="30dp"
+                     />
+
+                <TextView
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Birthdate"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/birthday"
+                    android:background="@drawable/rectangle_signup_edittext_email"
+                    android:textSize="12dp"
+                    android:digits="_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@."
+                    android:inputType="textFilter"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/karla"
+                    android:drawableLeft="@drawable/ic_date"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="Nov 9, 2019"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="30dp"
+                     />
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Address"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/location"
+                    android:background="@drawable/rectangle_signup_edittext_email"
+                    android:textSize="12dp"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/karla"
+                    android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="Valle Verde Pasig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="30dp"
+                    />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Email"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:background="@drawable/rectangle_signup_edittext_email"
+                    android:textSize="12dp"
+                    android:digits="_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@."
+                    android:inputType="textFilter"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/karla"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="your@email.com"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="30dp"
+                    ></EditText>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Contact"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/contact"
+                    android:background="@drawable/rectangle_signup_edittext_email"
+                    android:textSize="12dp"
+                    android:digits="_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@."
+                    android:inputType="textFilter"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/karla"
+                    android:drawableLeft="@drawable/ic_local_phone"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="+63912345678"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="30dp"
+                    />
+
+
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Password"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+
+                    />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:password="true"
+                    android:background="@drawable/rectangle_signup_edittext_email"
+                    android:textSize="12dp"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/karla"
+                    android:drawableLeft="@drawable/ic_lock_process"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="+63912345678"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Confirm Password"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+
+                    android:textStyle="bold" />
+                <EditText
+
+                    android:password="true"
+                    android:id="@+id/confirmpass"
+                    android:background="@drawable/rectangle_signup_edittext_email"
+                    android:textSize="12dp"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/karla"
+                    android:drawableLeft="@drawable/lock_pass"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="+63912345678"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="30dp"
+/>
+
+                <TextView
+
+                    android:fontFamily="@font/karla"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="@string/phone_email"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                <RadioGroup
+                    android:id="@+id/contactoption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+                    <RadioButton
+                        android:fontFamily="@font/proxima"
+                        android:layout_width="wrap_content"
+                        android:text="Phone"
+                        android:paddingRight="30dp"
+                        android:layout_height="wrap_content">
+
+                    </RadioButton>
+                    <RadioButton
+                        android:text="Email"
+
+                        android:fontFamily="@font/proxima"
+                        android:paddingRight="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </RadioButton>
+
+
+                </RadioGroup>
+
+
+                </LinearLayout>
+
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/karla"
+                    android:text="@string/am_pm"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/contacttime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+                        <RadioButton
+
+                            android:fontFamily="@font/proxima"
+                            android:layout_width="wrap_content"
+                            android:text="Am"
+                            android:paddingRight="30dp"
+                            android:layout_height="wrap_content">
+
+                        </RadioButton>
+                        <RadioButton
+                            android:text="Pm"
+                            android:fontFamily="@font/proxima"
+                            android:paddingRight="50dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </RadioButton>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+
+                        android:layout_marginHorizontal="30dp"
+                        android:fontFamily="@font/proxima"
+                        android:layout_marginVertical="5dp"
+                        android:id="@+id/newsletter"
+                               android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:text="@string/varified"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:fontFamily="@font/proxima"
+                    android:text="@string/required"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="33dp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/signupbtn"
+                        android:fontFamily="@font/proxima"
+                        android:textColor="#fff"
+                        android:background="@drawable/background_button"
+                        android:layout_width="220dp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Up"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Already have an account ?"
+                            android:fontFamily="@font/proxima"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/grey"
+                            android:textSize="11dp" />
+
+                        <TextView
+                            android:id="@+id/signinbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowColor="@color/motif"
+                            android:text="Sign In"
+                            android:fontFamily="@font/proxima"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/motif"
+                            android:textSize="11dp"
+                            android:textStyle="italic|bold"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="All rights reserved 2019."
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

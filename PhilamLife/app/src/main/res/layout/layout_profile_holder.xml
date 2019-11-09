@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutnotif"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:paddingBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+<de.hdodenhof.circleimageview.CircleImageView
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="60dp"
+    android:src="@drawable/profpic"
+    />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:fontFamily="@font/karla"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="email"
+                    android:fontFamily="@font/proxima"
+                    android:textSize="12dp"
+                    />
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="contact"
+                    android:fontFamily="@font/proxima"
+                    android:textSize="12dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:layout_marginHorizontal="20dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/karla"
+            android:text="Active Financial Plan Subscriptions"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                ><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colors.aquamarine"
+                    ></LinearLayout>
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/protection"
+                    />
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima"
+                    android:text="PROTECTION"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+
+                    />
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima"
+                    android:text="Take care of the needs of your loved ones, no matter what happens to you."
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+
+
+                    />
+                </LinearLayout>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                ><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colors.obelisk"
+                    ></LinearLayout>
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/education"
+                    />
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima"
+                    android:text="EDUCATION"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+
+                    />
+                <TextView
+                    android:layout_marginBottom="12dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima"
+                    android:text="Send your children to their dream university or college."
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+
+
+                    />
+                </LinearLayout>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                ><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#e86487"
+                    ></LinearLayout>
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:src="@drawable/health"
+                        />
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima"
+                        android:text="HEALTH"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+
+                        />
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima"
+                        android:text="Get coverage on expensive health setbacks so that you can focus on getting better."
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                ><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#fbbf56"
+                    ></LinearLayout>
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:src="@drawable/retirement"
+                        />
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima"
+                        android:text="RETIREMENT"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+
+                        />
+                    <TextView
+                        android:layout_marginBottom="2dp"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima"
+                        android:text="Have the right savings plan to help you achieve your future dreams."
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
