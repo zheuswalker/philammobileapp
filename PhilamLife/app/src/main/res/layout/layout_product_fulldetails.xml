@@ -18,7 +18,14 @@
         android:orientation="vertical"
 >
 
+            <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                android:layout_width="match_parent"
+                android:layout_height="255dp"
+                app:controller_layout_id="@layout/layout_exoplayerlayoutfeed"
+                android:id="@+id/exoplayer"
+                />
         <androidx.cardview.widget.CardView
+            android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
            >
@@ -27,14 +34,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-            <ImageView
-                android:transitionName="transitimage"
-                android:id="@+id/market_product_view_prodimage"
-                android:layout_width="match_parent"
-                android:layout_height="420dp"
-                android:fadingEdgeLength="20dp"
-                android:scaleType="fitXY"
-                />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

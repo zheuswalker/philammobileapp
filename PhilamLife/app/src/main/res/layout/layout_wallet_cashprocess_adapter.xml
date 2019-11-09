@@ -8,7 +8,6 @@ android:orientation="vertical"
 >
 <androidx.cardview.widget.CardView
     android:id="@+id/serviceview"
-    android:layout_marginTop="5dp"
     android:layout_marginBottom="2dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
@@ -18,20 +17,38 @@ android:orientation="vertical"
     >
 
     <LinearLayout
-
-        android:layout_margin="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
         <ImageView
             android:src="@drawable/slide"
-            android:layout_marginLeft="5dp"
             android:id="@+id/slide"
             android:layout_gravity="center"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/type"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/karla"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CASHIN"
+                android:textSize="10dp"
+                />
+        </LinearLayout>
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
@@ -64,7 +81,7 @@ android:orientation="vertical"
             android:textSize="11dp"
             android:id="@+id/topup"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:layout_height="match_parent"
             android:text="  "
             android:textColor="#000"/>

@@ -130,6 +130,7 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
                 PaymentConfirmation confirm = data
                         .getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
                 if (confirm != null) {
+
                     String email  = getIntent().getStringExtra("email");
                     String money = getIntent().getStringExtra("cashinprice");
                     String processtype = getIntent().getStringExtra("processtype");
@@ -137,6 +138,7 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
 
 
                     Toast.makeText(context, "Cash In Successful.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Please refresh the page.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), overall_home_activity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     startActivity(intent);

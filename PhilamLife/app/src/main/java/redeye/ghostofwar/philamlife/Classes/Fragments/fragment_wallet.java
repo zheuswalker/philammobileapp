@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
@@ -66,16 +67,20 @@ public class fragment_wallet extends Fragment  {
 
     CardView cashin;
     Context context;
+    TextView walletmoney,availpoints;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         final View rootView = inflater.inflate(R.layout.layout_wallet_holder, container, false);
         cashin = rootView.findViewById(R.id.cashin);
+        availpoints = rootView.findViewById(R.id.availpoints);
         context = getContext();
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         final String name = preferences.getString("session", "");
 
+        walletmoney = rootView.findViewById(R.id.walletmoney);
         new getServices(context).execute(name);
+
         recyclerView = rootView.findViewById(R.id.wallethistory);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -149,7 +154,7 @@ public class fragment_wallet extends Fragment  {
         @Override
         protected String doInBackground(String... params) {
 
-            String reference = Base.BASE_URL+ EndPoints.PHILAMSERVICES;
+            String reference = Base.BASE_URL+ EndPoints.WALLETHISTORY;
 
             String data ="";
 
@@ -214,6 +219,9 @@ public class fragment_wallet extends Fragment  {
                 try {
                     JSONArray feedvalues = feedcontentvalues.getJSONArray("wallethistory");
 
+                    Double walletpoints=0.00;
+                    Double cashin = 0.00;
+                    Double cashout = 0.00;
                     for (int i=0; i < feedvalues.length(); i++)
                     {
                         JSONObject feedarray = feedvalues.getJSONObject(i);
@@ -221,7 +229,10 @@ public class fragment_wallet extends Fragment  {
                         String pw_processtype = feedarray.getString("pw_processtype").trim();
                         String pw_processdate = feedarray.getString("pw_processdate").trim();
                         String pw_processfee = feedarray.getString("pw_processfee").trim();
-
+                        if(pw_processtype.equals("0"))
+                            cashin+=Double.parseDouble(pw_processedmoney);
+                        else
+                            cashout+= Double.parseDouble(pw_processedmoney);
                         redeye.ghostofwar.philamlife.Classes.Wallet.wallet_cashprocess_constructors current1 = new wallet_cashprocess_constructors(pw_processedmoney,pw_processtype,pw_processdate,pw_processfee);
                         wallet_cashprocess_constructors.add(current1);
 
@@ -229,6 +240,10 @@ public class fragment_wallet extends Fragment  {
 
 
                     }
+
+                    walletpoints = cashin-cashout;
+                    availpoints.setText(String.valueOf(cashin*0.01));
+                    walletmoney.setText(String.valueOf(walletpoints));
                     wallet_cashprocess_adapter = new wallet_cashprocess_adapter(context, wallet_cashprocess_constructors);
                     recyclerView.setAdapter(null);
                     recyclerView.setAdapter(wallet_cashprocess_adapter);

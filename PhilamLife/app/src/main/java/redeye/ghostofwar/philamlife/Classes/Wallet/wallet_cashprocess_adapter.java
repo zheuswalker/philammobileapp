@@ -1,8 +1,8 @@
 package redeye.ghostofwar.philamlife.Classes.Wallet;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
@@ -49,9 +50,17 @@ public class wallet_cashprocess_adapter extends RecyclerView.Adapter<wallet_cash
 
         final wallet_cashprocess_constructors feed_required_settergetter = wallet_cashprocess_constructors.get(position);
         holder.dateprocessed.setText(feed_required_settergetter.pw_processdate());
-        holder.cashin.setText(feed_required_settergetter.pw_processedmoney());
-        if(!feed_required_settergetter.pw_processtype().equals("0"))
+        holder.cashin.setText("Money Transferred : "+feed_required_settergetter.pw_processedmoney());
+
+        if(feed_required_settergetter.pw_processtype().equals("0")) {
+            holder.type.setText("CASH IN");
+            holder.slide.setImageDrawable(context.getDrawable(R.drawable.slidedown));
             holder.slide.setRotation(180);
+        }
+        else
+            holder.type.setText("CASH OUT");
+        holder.topup.setText("TopUp :"+feed_required_settergetter.pw_processfee());
+
 
 
     }
@@ -62,7 +71,7 @@ public class wallet_cashprocess_adapter extends RecyclerView.Adapter<wallet_cash
     }
     public class AllcurrentHolder extends RecyclerView.ViewHolder{
 
-        TextView dateprocessed;
+        TextView dateprocessed,type;
         ImageView slide;
         TextView topup,cashin;
         CardView serviceview;
@@ -73,6 +82,7 @@ public class wallet_cashprocess_adapter extends RecyclerView.Adapter<wallet_cash
             slide = itemView.findViewById(R.id.slide);
             serviceview = itemView.findViewById(R.id.serviceview);
             cashin= itemView.findViewById(R.id.cashin);
+            type = itemView.findViewById(R.id.type);
 
         }
     }

@@ -29,10 +29,11 @@
             android:orientation="vertical"
             >
             <TextView
+                android:id="@+id/walletmoney"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0.00"
-                android:textSize="50dp"
+                android:textSize="30dp"
                 android:textAlignment="center"
                 android:fontFamily="@font/proxima"
 
@@ -64,10 +65,11 @@
                 android:orientation="vertical"
                 >
                 <TextView
+                    android:id="@+id/availpoints"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0.00"
-                    android:textSize="50dp"
+                    android:textSize="30dp"
                     android:textAlignment="center"
                     android:fontFamily="@font/proxima"
 
@@ -123,41 +125,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Cash In"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_margin="10dp"
-            android:elevation="2dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="10dp"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <ImageView
-                    android:layout_margin="10dp"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/asset_feed_pay"
-
-                    />
-                <TextView
-                    android:textAlignment="center"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/proxima"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Pay Insurance"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     />

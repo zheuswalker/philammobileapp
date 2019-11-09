@@ -2,6 +2,7 @@ package redeye.ghostofwar.philamlife.Classes.ServicesOffered;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
@@ -12,6 +13,22 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.ExoPlayerFactory;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory;
+import com.google.android.exoplayer2.extractor.ExtractorsFactory;
+import com.google.android.exoplayer2.source.ExtractorMediaSource;
+import com.google.android.exoplayer2.source.MediaSource;
+import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection;
+import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.google.android.exoplayer2.trackselection.TrackSelector;
+import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
+import com.google.android.exoplayer2.ui.SimpleExoPlayerView;
+import com.google.android.exoplayer2.upstream.BandwidthMeter;
+import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,11 +48,15 @@ import java.nio.charset.StandardCharsets;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import redeye.ghostofwar.philamlife.Classes.Configs.EndPoints;
 import redeye.ghostofwar.philamlife.R;
 
 
 public class services_fulldetails extends AppCompatActivity {
     String prodname;
+    SimpleExoPlayerView exopostwithcomment ;
+    SimpleExoPlayer exoPlayer;
+
 
     public static Context context;
 
@@ -46,14 +67,15 @@ public class services_fulldetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_product_fulldetails);
-            prodname = getIntent().getStringExtra("ProductName");
+        exopostwithcomment = findViewById(R.id.exoplayer);
+
+        prodname = getIntent().getStringExtra("ProductName");
             prodname = prodname.substring(prodname.lastIndexOf(":") + 1);
             prodnamet = findViewById(R.id.market_product_view_name);
             prodnamet.setText(prodname);
             prodprice = findViewById(R.id.market_product_view_price);
             proddesc = findViewById(R.id.market_product_view_desc);
             market_product_seller = findViewById(R.id.market_product_seller);
-            prodimage = findViewById(R.id.market_product_view_prodimage);
             context = getApplicationContext();
 
             Toolbar back = findViewById(R.id.back);
@@ -163,6 +185,20 @@ proddesc.setText(result);
                         prodprice.setText("Issue Age: "+ppo_issueage);
                         market_product_seller.setText("Life Insurance Coverage  : "+ ppo_coverage);
                     }
+                    BandwidthMeter bandwidthMeter = new DefaultBandwidthMeter();
+                    TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
+
+                    exoPlayer = ExoPlayerFactory.newSimpleInstance(context, trackSelector);
+                    Uri uri = Uri.parse("https://www.youtube.com/watch?v=Zocb273qVJY");
+                    DefaultHttpDataSourceFactory dataSourceFactory = new DefaultHttpDataSourceFactory("exoplayer_video");
+                    ExtractorsFactory extractorsFactory = new DefaultExtractorsFactory();
+                    MediaSource mediaSource = new ExtractorMediaSource(uri, dataSourceFactory, extractorsFactory, null, null);
+                    exopostwithcomment.setPlayer(exoPlayer);
+                    exoPlayer.prepare(mediaSource);
+                    exopostwithcomment.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FILL);
+                    exoPlayer.setVideoScalingMode(C.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING);
+                    exopostwithcomment.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FIT);
+                    exopostwithcomment.setVisibility(View.VISIBLE);
 
 
                 } catch (JSONException e) {
