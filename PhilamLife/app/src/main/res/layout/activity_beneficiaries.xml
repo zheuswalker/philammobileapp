@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Classes.ServicesOffered.Beneficiaries"
+    android:orientation="vertical"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:theme="@style/ToolbarColoredBackArrow"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:id="@+id/back"
+        app:title=" "
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        >
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:fontFamily="@font/proxima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beneficiary 1"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/email"
+                android:background="@drawable/rectangle_signup_edittext_email"
+                android:textSize="12dp"
+                android:digits="_ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz1234567890@."
+                android:inputType="textFilter"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/karla"
+                android:drawableLeft="@drawable/asset_feed_profile"
+                android:paddingRight="20dp"
+                android:drawablePadding="10dp"
+                android:text="John Doe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="30dp"
+                ></EditText>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        >
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:fontFamily="@font/proxima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beneficiary 2"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:background="@drawable/rectangle_signup_edittext_email"
+                android:textSize="12dp"
+                android:digits="_ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz1234567890@."
+                android:inputType="textFilter"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/karla"
+                android:drawableLeft="@drawable/asset_feed_profile"
+                android:paddingRight="20dp"
+                android:drawablePadding="10dp"
+                android:text="Michael Diaz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="30dp"
+                ></EditText>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        >
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:fontFamily="@font/proxima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beneficiary 3"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:background="@drawable/rectangle_signup_edittext_email"
+                android:textSize="12dp"
+                android:digits="_ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz1234567890@."
+                android:inputType="textFilter"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/karla"
+                android:drawableLeft="@drawable/asset_feed_profile"
+                android:paddingRight="20dp"
+                android:drawablePadding="10dp"
+                android:text="Robert Cruz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="30dp"
+                ></EditText>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:id="@+id/apply"
+        android:fontFamily="@font/proxima"
+        android:textColor="#fff"
+        android:background="@drawable/background_button"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="APPLY"/>
+</LinearLayout>
+</LinearLayout>

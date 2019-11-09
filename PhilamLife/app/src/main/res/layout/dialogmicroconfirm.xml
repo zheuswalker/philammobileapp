@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:text="MicroInsurance"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:textAlignment="center"
+
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:text="This micro insurance only covers you for 7 days, after this confirmation please fill up your beneficiaries in the next page"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:textAlignment="center"
+
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:fontFamily="@font/opensansregular"
+            android:id="@+id/proceed"
+            android:layout_margin="5dp"
+            android:background="@color/colors.comp"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proceed"
+            />
+        <Button
+            android:fontFamily="@font/opensansregular"
+            android:id="@+id/close"
+            android:layout_margin="5dp"
+            android:background="#C0BFBF"
+            android:textColor="#090909"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

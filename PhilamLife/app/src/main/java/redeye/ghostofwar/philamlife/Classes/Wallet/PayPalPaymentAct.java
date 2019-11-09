@@ -131,9 +131,12 @@ public class PayPalPaymentAct extends Activity implements OnClickListener {
                         .getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
                 if (confirm != null) {
 
+
                     String email  = getIntent().getStringExtra("email");
                     String money = getIntent().getStringExtra("cashinprice");
                     String processtype = getIntent().getStringExtra("processtype");
+
+                    if(!getIntent().hasExtra("paymicro"))
                     new insertwallet(context).execute(email,money,processtype,"10");
 
 

@@ -66,6 +66,7 @@ TextView whereiam;;
         dialogs.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogs.setCancelable(false);
         dialogs.setContentView(R.layout.dialogdatamine);
+
             recyclerView = dialogs.findViewById(R.id.datamine);
             Button closedialog = dialogs.findViewById(R.id.closedialog);
         closedialog.setOnClickListener(new View.OnClickListener() {

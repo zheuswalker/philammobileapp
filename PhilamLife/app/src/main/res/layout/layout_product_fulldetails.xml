@@ -114,7 +114,7 @@
                       android:layout_weight="1"
                       android:layout_height="match_parent" />
                         <Button
-
+                            android:id="@+id/microinsur"
                             android:textColor="#fff"
                             android:background="@color/mainthemecolor"
                             android:text="MicroInsurance (P900)"

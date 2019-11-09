@@ -1,14 +1,18 @@
 package redeye.ghostofwar.philamlife.Classes.ServicesOffered;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -49,6 +53,8 @@ import java.nio.charset.StandardCharsets;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import redeye.ghostofwar.philamlife.Classes.Branches.fa_mapbox;
+import redeye.ghostofwar.philamlife.Classes.Configs.Base;
 import redeye.ghostofwar.philamlife.Classes.Configs.EndPoints;
 import redeye.ghostofwar.philamlife.R;
 
@@ -60,7 +66,7 @@ public class services_fulldetails extends AppCompatActivity {
 
 
     public static Context context;
-    Button fullpayment;
+    Button fullpayment,microinsur;
     public static ImageView prodimage;
     public static TextView prodprice, proddesc, prodrate, prodnamet,market_product_seller;
     String sellername;
@@ -70,6 +76,7 @@ public class services_fulldetails extends AppCompatActivity {
         setContentView(R.layout.layout_product_fulldetails);
         exopostwithcomment = findViewById(R.id.exoplayer);
         fullpayment = findViewById(R.id.fullpayment);
+        microinsur = findViewById(R.id.microinsur);
         prodname = getIntent().getStringExtra("ProductName");
             prodname = prodname.substring(prodname.lastIndexOf(":") + 1);
             prodnamet = findViewById(R.id.market_product_view_name);
@@ -89,6 +96,13 @@ public class services_fulldetails extends AppCompatActivity {
             });
             ImageView top = findViewById(R.id.backtop);
             final ScrollView sc = findViewById(R.id.fulldetailsscroll);
+fullpayment.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent a = new Intent(services_fulldetails.this, fa_mapbox.class);
+        startActivity(a);
+    }
+});
             top.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -96,8 +110,35 @@ public class services_fulldetails extends AppCompatActivity {
                     sc.fullScroll(View.FOCUS_UP);
                 }
             });
+            microinsur.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final Dialog dialogs = new Dialog(services_fulldetails.this);
+                    dialogs.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialogs.setCancelable(false);
+                    dialogs.setContentView(R.layout.dialogmicroconfirm);
+                    Button close= dialogs.findViewById(R.id.close);
+                    close.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialogs.dismiss();
+                        }
+                    });
+                    Button proceed = dialogs.findViewById(R.id.proceed);
+                    proceed.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(services_fulldetails.this, Beneficiaries.class);
+                            intent.putExtra("fee",microinsur.getText().toString().substring(microinsur.getText().toString().lastIndexOf("P")+1,
+                                    microinsur.getText().toString().lastIndexOf(")")
+                                    ));
+                            startActivity(intent);
+                        }
+                    });
+                    dialogs.show();
+                }
+            });
             new getProdDetails(context).execute(prodname);
-
 
     }
 
@@ -110,7 +151,7 @@ public class services_fulldetails extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
 
-            String reference = "https://server.sympies.net/api/getPhilProducts.php";
+            String reference = Base.BASE_URL+EndPoints.PHILAMPRODUCTSDETAIL;
             String servicename = params[0];
             String data ="";
             try {
@@ -167,7 +208,7 @@ proddesc.setText(result);
                 feedcontentvalues = new JSONObject(result);
 
                 try {
-                    JSONArray feedvalues = feedcontentvalues.getJSONArray("products");
+                    JSONArray feedvalues = feedcontentvalues.getJSONArray("productdetails");
                     for (int i=0; i < feedvalues.length(); i++)
                     {
                         JSONObject feedarray = feedvalues.getJSONObject(i);
@@ -183,7 +224,10 @@ proddesc.setText(result);
                         } else {
                             proddesc.setText(Html.fromHtml(ppo_productdesc));
                         }
+                        Double micro = (Double.parseDouble(ppo_productequity)/365)*7;
+                        micro = Math.round(micro*100)/100.0d;
                         fullpayment.setText("FULL (P"+ppo_productequity+")");
+                        microinsur.setText("MICROINSURANCE 7 DAYS (P"+micro+")");
                         prodnamet.setText(ppo_productname);
                         prodprice.setText("Issue Age: "+ppo_issueage);
                         market_product_seller.setText("Life Insurance Coverage  : "+ ppo_coverage);

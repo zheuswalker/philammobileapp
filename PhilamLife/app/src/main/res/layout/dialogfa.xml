@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:text="INFORMATION"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:textAlignment="center"
+
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:text="Name "
+        android:id="@+id/name"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:text="haha.123@gmail.com"
+        android:id="@+id/email"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:textAlignment="center"
+
+        />
+    <LinearLayout
+        android:id="@+id/layoutcall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        >
+
+
+
+
+        <ImageView
+            android:fontFamily="@font/opensansregular"
+            android:id="@+id/proceed"
+            android:layout_margin="5dp"
+            android:src="@drawable/call_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed"
+            />
+        <TextView
+            android:fontFamily="@font/opensansregular"
+            android:id="@+id/call_now"
+
+            android:layout_margin="5dp"
+            android:textColor="#090909"
+            android:paddingHorizontal="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+63099765434566"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

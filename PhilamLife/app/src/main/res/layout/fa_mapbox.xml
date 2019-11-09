@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="14.5995"
+        mapbox:mapbox_cameraTargetLng="120.9842"
+        mapbox:mapbox_cameraZoom="12"
+        mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10"
+
+        >
+        <TextView
+
+            android:fontFamily="@font/proxima"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="top"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="Nearest Branches"
+            android:background="@color/mainthemecolor"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/navigate"
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Start Navigating"
+            android:background="@drawable/lightcolor"
+            android:layout_marginHorizontal="40dp"
+            android:textStyle="bold" />
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+</LinearLayout>
