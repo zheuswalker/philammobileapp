@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -59,7 +60,7 @@ public class services_fulldetails extends AppCompatActivity {
 
 
     public static Context context;
-
+    Button fullpayment;
     public static ImageView prodimage;
     public static TextView prodprice, proddesc, prodrate, prodnamet,market_product_seller;
     String sellername;
@@ -68,7 +69,7 @@ public class services_fulldetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_product_fulldetails);
         exopostwithcomment = findViewById(R.id.exoplayer);
-
+        fullpayment = findViewById(R.id.fullpayment);
         prodname = getIntent().getStringExtra("ProductName");
             prodname = prodname.substring(prodname.lastIndexOf(":") + 1);
             prodnamet = findViewById(R.id.market_product_view_name);
@@ -171,6 +172,7 @@ proddesc.setText(result);
                     {
                         JSONObject feedarray = feedvalues.getJSONObject(i);
                         String ppo_productname= feedarray.getString("ppo_productname");
+                        String ppo_productequity= feedarray.getString("ppo_productequity");
                         String ppo_issueage = feedarray.getString("ppo_issueage");
                         String ppo_coverage = feedarray.getString("ppo_coverage");
                         String ppo_productdesc = feedarray.getString("ppo_productdesc");
@@ -181,6 +183,7 @@ proddesc.setText(result);
                         } else {
                             proddesc.setText(Html.fromHtml(ppo_productdesc));
                         }
+                        fullpayment.setText("FULL (P"+ppo_productequity+")");
                         prodnamet.setText(ppo_productname);
                         prodprice.setText("Issue Age: "+ppo_issueage);
                         market_product_seller.setText("Life Insurance Coverage  : "+ ppo_coverage);

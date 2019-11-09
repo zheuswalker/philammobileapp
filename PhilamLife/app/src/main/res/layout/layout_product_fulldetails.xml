@@ -106,6 +106,7 @@
                         >
 
                   <Button
+                      android:id="@+id/fullpayment"
                       android:textColor="#fff"
                       android:background="@color/colors.comp"
                       android:text="FULL (P1,000,000)"
