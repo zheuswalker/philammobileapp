@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="200dp"
+android:layout_height="wrap_content"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+    android:background="#FCFCFD"
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:fontFamily="@font/proxima"
+        android:text="SAMPLE TEXT"
+        android:textSize="13dp"
+        android:textAlignment="center"
+        />
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/adsimage"
+        />
+        <TextView
+            android:layout_margin="2dp"
+            android:id="@+id/productname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima"
+            android:text="SAMPLE TEXT"
+            android:textSize="11dp"
+            android:textAlignment="center"
+            />
+    <androidx.cardview.widget.CardView
+        android:layout_marginHorizontal="5dp"
+        android:id="@+id/cashin"
+        android:elevation="2dp"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/full"
+                android:fontFamily="@font/karla"
+                android:textSize="10dp"
+                android:textColor="#fff"
+                android:background="@color/colors.comp"
+                android:text="FULL (P1,000,000)"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/micro"
+                android:fontFamily="@font/karla"
+                android:textSize="10dp"
+                android:textColor="#fff"
+                android:background="@color/mainthemecolor"
+                android:text="MicroInsurance (7-DAYS P900)"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

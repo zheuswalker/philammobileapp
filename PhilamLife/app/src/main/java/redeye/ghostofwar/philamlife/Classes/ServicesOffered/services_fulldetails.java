@@ -189,7 +189,7 @@ proddesc.setText(result);
                     TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
 
                     exoPlayer = ExoPlayerFactory.newSimpleInstance(context, trackSelector);
-                    Uri uri = Uri.parse("https://www.youtube.com/watch?v=Zocb273qVJY");
+                    Uri uri = Uri.parse("https://server.sympies.net/philamserver/PhilamServer/philam.mp4");
                     DefaultHttpDataSourceFactory dataSourceFactory = new DefaultHttpDataSourceFactory("exoplayer_video");
                     ExtractorsFactory extractorsFactory = new DefaultExtractorsFactory();
                     MediaSource mediaSource = new ExtractorMediaSource(uri, dataSourceFactory, extractorsFactory, null, null);

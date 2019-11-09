@@ -13,4 +13,8 @@
     <string name="access_token">pk.eyJ1IjoiZXJ5bGdvIiwiYSI6ImNrMHM5YjVhaTAwYTAzY3Byb2xnb2QzNWsifQ.egNisBArBccooR5MJ-Myww</string>
 
 
+    <string name="fb_login_protocol_scheme">fb317416692263819</string>
+    <string name="facebook_app_id">2267677980002816</string>
+
+
 </resources>

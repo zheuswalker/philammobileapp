@@ -61,8 +61,6 @@ public class    fragment_home extends Fragment {
         recyclerView = rootView.findViewById(R.id.notificationrecycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
         return  rootView;
 
 
