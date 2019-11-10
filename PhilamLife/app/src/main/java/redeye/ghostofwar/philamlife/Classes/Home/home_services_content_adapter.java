@@ -61,10 +61,12 @@ public class home_services_content_adapter extends RecyclerView.Adapter<home_ser
             }
         });
 
+
         Uri profilePicUri = Uri.parse("https://server.sympies.net/philamserver/PhilamServer/iconic/"+feed_required_settergetter.pso_icon());
         Glide.with(context)
                 .load(profilePicUri)
                 .into(holder.serviceicon);
+
 
 
     }

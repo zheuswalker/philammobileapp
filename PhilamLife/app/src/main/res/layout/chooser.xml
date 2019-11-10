@@ -31,6 +31,7 @@
     android:layout_marginTop="70dp"
     android:gravity="center">
     <Button
+        android:textColor="#fff"
     android:id="@+id/login"
     android:background="@drawable/background_button"
     android:layout_width="220dp"
@@ -58,12 +59,14 @@
             android:id="@+id/signup"
             android:background="@drawable/signup_backgroundbtn"
             android:layout_width="220dp"
-
             android:layout_height="wrap_content"
             android:text="Sign Up"></Button>
         <Button
             android:id="@+id/signupwithfacebook"
+            android:backgroundTint="@color/colors.comp"
             android:background="@drawable/signup_backgroundbtn"
+            android:textColor="#fff"
+            android:layout_marginTop="10dp"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="Sign Up With Facebook"></Button>

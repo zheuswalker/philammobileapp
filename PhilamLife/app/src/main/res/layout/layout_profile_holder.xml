@@ -69,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/karla"
-            android:text="Active Financial Plan Subscriptions"
+            android:text="Active Financial Plan Subscriptions (2)"
             />
 
         <LinearLayout
@@ -132,6 +132,8 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardeducation"
+                android:foregroundTint="@color/grey"
                 android:layout_margin="10dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -139,16 +141,21 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="2dp"
                 ><LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
                 <LinearLayout
+
+                    android:duplicateParentState="true"
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
-                    android:background="@color/colors.obelisk"
+                    android:background="#000"
                     ></LinearLayout>
                 <LinearLayout
+
+                    android:duplicateParentState="true"
                     android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -262,7 +269,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
-                    android:background="#fbbf56"
+                    android:background="#000"
                     ></LinearLayout>
                 <LinearLayout
                     android:layout_margin="10dp"
@@ -271,6 +278,7 @@
                     android:orientation="vertical"
                     >
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:foregroundTint="#000"
                         android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="fill_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+
+        android:drawableLeft="@drawable/calculator"
+        android:paddingVertical="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/motif"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:text=" Computation"
+        />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                app:cardBackgroundColor="#f2f2f2"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:elevation="5dp"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:id="@+id/classic_personal_accident"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/classic_personal_accident"></ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="00.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="CLASSIC CORPORATE PERSONAL ACCIDENT"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text=""
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/classic_corporate_personal_accident"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/criticalprotect100"
+                        android:src="@drawable/critical_protect100"></ImageView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="00.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="AIA CRITICAL PROTECT 100"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/aia_critical_protect"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />     <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/credit_lite_prime"
+                    android:src="@drawable/credit_life_prime"></ImageView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="00.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="CREDIT LIFE PRIME"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/credit_life_prime"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+                    <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_width="match_parent"
+                        android:id="@+id/group_life_classic"
+                    android:layout_height="200dp"
+                    android:src="@drawable/group_life_classic"></ImageView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="00.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="GROUP LIFE CLASSIC "
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/group_life_classic"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/buddy_guard"
+                        android:src="@drawable/buddyguard"></ImageView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="00.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="BUDDY GUARD"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/buddyguard"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/group_health_choice_plus"
+                        android:src="@drawable/group_health_choice_plus"></ImageView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="00.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="GROUP HEALTH CHOICE PLUS"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/group_health_choice_plus"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="OPTION"
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        />
+                    <RadioGroup
+                        android:paddingVertical="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingHorizontal="20dp"
+                        android:orientation="vertical"
+                        >
+                        <RadioButton
+                            android:id="@+id/monthly"
+                            android:layout_width="wrap_content"
+                            android:paddingVertical="10dp"
+                            android:text="Monthly"
+                            android:paddingRight="30dp"
+                            android:textColor="@color/grey"
+                            android:textSize="15dp"
+                            android:layout_height="wrap_content">
+
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/yearly"
+                            android:text="Yearly"
+                            android:paddingRight="50dp"
+                            android:paddingVertical="10dp"
+                            android:textColor="@color/grey"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </RadioButton>
+                    </RadioGroup>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+                        <TextView
+                            android:paddingHorizontal="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp"
+                            android:text="TOTAL"
+                            android:textStyle="bold|italic"
+                            android:textAlignment="textStart"
+                            android:textSize="25dp"
+                            />
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/total"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="00.00"
+
+                            android:textAlignment="textEnd"
+                            android:textSize="25dp"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copyright © 2015 \n AIA Group Limited and its subsidiaries. \n All rights reserved."
+                android:textAlignment="center"
+                android:paddingVertical="20dp"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

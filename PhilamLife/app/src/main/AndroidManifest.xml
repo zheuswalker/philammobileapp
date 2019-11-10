@@ -21,11 +21,7 @@
         <activity android:name=".Classes.Landing.activity_signin" />
         <activity android:name=".Classes.Landing.activity_signup" />
         <activity android:name=".Classes.Landing.chooser">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Classes.Activity.overall_home_activity">
 
@@ -40,6 +36,14 @@
         <activity android:name=".Classes.Wallet.PayPalPaymentAct" />
         <activity android:name=".Classes.Branches.mapbox" />
         <activity android:name=".Classes.Branches.fa_mapbox" />
+        <activity android:name=".Classes.Fragments.calculator">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".Classes.Fragments.insurance_product" />
         <activity
             android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"

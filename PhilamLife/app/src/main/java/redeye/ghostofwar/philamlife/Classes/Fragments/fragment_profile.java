@@ -10,8 +10,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import org.json.JSONArray;
@@ -55,7 +57,6 @@ public class fragment_profile extends Fragment {
         email = rootView.findViewById(R.id.email);
 
         new getprofiledetails(context).execute();
-
         return  rootView;
 
 

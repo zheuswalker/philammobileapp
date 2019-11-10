@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="fill_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+
+        android:drawableLeft="@drawable/calculator"
+        android:paddingVertical="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/motif"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:text=" Computation"
+        />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="#f2f2f2"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/a"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/money_tree"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="P 54,000.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="ACTIVITY FAMILY PROVIDER"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/active_family_provider"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/b"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/all_in_one"></RadioButton>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="P 40,000.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="AIA ALL IN ONE"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/aia_critical_protect_100"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/c"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/active_joint_critical_protect"
+                        ></RadioButton>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="P 54,000.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="ACTIVE JOINT CRITICAL PROTECT"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/active_joint_critical_protec"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/d"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/active_money_works"></RadioButton>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="P 60,000.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="ACTIVE MONEYWORKS"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/active_money_works"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/active_joint_critical_protec"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/e"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/active_health_invest_plus"
+                         />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="P 54,500.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="ACTIVE HEALTH INVESTMENT PLUS"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/f"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="20dp"
+                       android:background="@drawable/critical_protect100"
+                        android:src="@drawable/critical_protect100"></RadioButton>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="00.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:text="AIA CRITICAL PROTECTION 100"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/future_tittle"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/aia_critical_protect_100"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="OPTION"
+                        android:textAlignment="center"
+                        android:textSize="25dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp">
+
+                        <RadioButton
+                            android:id="@+id/monthly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingVertical="10dp"
+                            android:paddingRight="30dp"
+                            android:text="Monthly"
+                            android:textColor="@color/grey"
+                            android:textSize="15dp">
+
+                        </RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/yearly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingVertical="10dp"
+                            android:paddingRight="50dp"
+                            android:text="Yearly"
+                            android:textColor="@color/grey"
+                            android:textSize="15dp">
+
+                        </RadioButton>
+                    </RadioGroup>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="20dp"
+                            android:text="TOTAL"
+                            android:textAlignment="textStart"
+                            android:textSize="25dp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+
+                            android:id="@+id/total"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="00.00"
+
+                            android:textAlignment="textEnd"
+                            android:textSize="25dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="20dp"
+                android:paddingTop="30dp"
+                android:text="Copyright © 2015 \n AIA Group Limited and its subsidiaries. \n All rights reserved."
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

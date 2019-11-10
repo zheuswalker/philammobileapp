@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+
+        android:drawableLeft="@drawable/calculator"
+        android:paddingVertical="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/motif"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:text=" Insurance Product"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                app:cardBackgroundColor="#f2f2f2"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:elevation="5dp"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="DISCOVER"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Im plan to "
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <RadioGroup
+                            android:paddingVertical="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:orientation="vertical"
+                            >
+                            <RadioButton
+                                android:id="@+id/one"
+                                android:layout_width="wrap_content"
+                                android:paddingVertical="10dp"
+                                android:text="Retire Comfortably"
+                                android:paddingRight="30dp"
+                                android:textColor="@color/grey"
+                                android:textSize="15dp"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:id="@+id/two"
+                                android:text="Achieve my dreams"
+                                android:paddingRight="50dp"
+                                android:paddingVertical="10dp"
+                                android:textColor="@color/grey"
+                                android:textSize="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:id="@+id/three"
+                                android:text="Save for mu children education"
+                                android:paddingRight="50dp"
+                                android:textColor="@color/grey"
+
+                                android:paddingVertical="10dp"
+                                android:textSize="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:id="@+id/four"
+                                android:text="Prepare for health-related setbacks."
+                                android:textColor="@color/grey"
+                                android:paddingVertical="10dp"
+                                android:textSize="15dp"
+                                android:paddingRight="50dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                                         </RadioButton>
+
+                            <RadioButton
+                                android:id="@+id/five"
+                                android:text="Live a healthier, longer and better life"
+                                android:paddingRight="50dp"
+                                android:paddingVertical="10dp"
+                                android:textColor="@color/grey"
+                                android:textSize="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:id="@+id/six"
+                                android:text="Prepare for life's uncertainties"
+                                android:textColor="@color/grey"
+                                android:textSize="15dp"
+                                android:paddingVertical="10dp"
+                                android:paddingRight="50dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+
+                            <RadioButton
+                                android:id="@+id/seven"
+                                android:text="Prepare my business and employees"
+                                android:paddingRight="50dp"
+                                android:textColor="@color/grey"
+                                android:paddingVertical="10dp"
+                                android:textSize="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+
+
+
+
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:orientation="vertical">
+                        <TextView
+
+                            android:paddingVertical="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CALCULATE YOUR FINANCIAL NEEDS"
+
+                            android:textAlignment="textStart"
+                            android:textColor="@color/grey"
+                            android:textSize="18dp"
+
+                            android:textStyle="bold" />
+
+
+
+                        <Button
+                            android:id="@+id/product"
+                            android:layout_width="220dp"
+                            android:layout_marginVertical="10dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_button"
+                            android:text="FIND MY PRODUCT" />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingVertical="10dp"
+                            android:text="ALREADY KNOW WHAT YOU'RE LOOKING FOR?"
+
+                            android:textAlignment="textStart"
+                            android:textColor="@color/grey"
+                            android:textSize="15dp"
+
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:paddingVertical="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\t Browse our products and services. Click on the cards below to start."
+                            android:layout_marginHorizontal="20dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/grey"
+                            android:textSize="15dp"
+
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:gravity="center"
+                            android:layout_marginVertical="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FOR INDIVIDUALS"
+
+                                android:textAlignment="textStart"
+                                android:textColor="@color/grey"
+                                android:textSize="15dp"
+
+                                android:textStyle="bold" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="|"
+
+                                android:paddingHorizontal="5dp"
+                                android:textAlignment="textStart"
+                                android:textColor="#000"
+                                android:textSize="20dp"
+
+                                android:textStyle="bold" />
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FOR BUSINESSES"
+
+                                android:textAlignment="textStart"
+                                android:textColor="@color/grey"
+                                android:textSize="15dp"
+
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/insurance_product"></ImageView>
+
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copyright © 2019 \n AIA Group Limited and its subsidiaries. \n All rights reserved."
+                android:textAlignment="center"
+                android:paddingVertical="20dp"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
