@@ -50,7 +50,7 @@
 
                     android:orientation="vertical">
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/a"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
@@ -103,13 +103,13 @@
                         android:textSize="15dp" />
 
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/b"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="20dp"
-                        android:background="@drawable/all_in_one"></RadioButton>
+                        android:background="@drawable/all_in_one"></CheckBox>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -153,14 +153,14 @@
                         android:textAlignment="textStart"
                         android:textSize="15dp" />
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/c"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/active_joint_critical_protect"
-                        ></RadioButton>
+                        ></CheckBox>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -204,13 +204,13 @@
                         android:textAlignment="textStart"
                         android:textSize="15dp" />
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/d"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="20dp"
-                        android:background="@drawable/active_money_works"></RadioButton>
+                        android:background="@drawable/active_money_works"></CheckBox>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -254,7 +254,7 @@
                         android:textAlignment="textStart"
                         android:textSize="15dp" />
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/e"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
@@ -306,21 +306,21 @@
                         android:textSize="15dp" />
 
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/f"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="20dp"
                        android:background="@drawable/critical_protect100"
-                        android:src="@drawable/critical_protect100"></RadioButton>
+                        android:src="@drawable/critical_protect100"></CheckBox>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="10dp"
-                        android:text="00.00"
+                        android:text="P 58,000.00"
                         android:textAlignment="center"
                         android:textColor="@color/grey"
                         android:textSize="25dp"
@@ -367,38 +367,7 @@
                         android:textAlignment="center"
                         android:textSize="25dp" />
 
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:orientation="vertical"
-                        android:paddingHorizontal="20dp"
-                        android:paddingVertical="10dp">
 
-                        <RadioButton
-                            android:id="@+id/monthly"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingVertical="10dp"
-                            android:paddingRight="30dp"
-                            android:text="Monthly"
-                            android:textColor="@color/grey"
-                            android:textSize="15dp">
-
-                        </RadioButton>
-
-                        <RadioButton
-                            android:id="@+id/yearly"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingVertical="10dp"
-                            android:paddingRight="50dp"
-                            android:text="Yearly"
-                            android:textColor="@color/grey"
-                            android:textSize="15dp">
-
-                        </RadioButton>
-                    </RadioGroup>
 
 
                     <LinearLayout

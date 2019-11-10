@@ -17,7 +17,6 @@
     <string name="facebook_app_id">2267677980002816</string>
 
 
-
     // update
 
     <string name="future_tittle">WHAT THIS PRODUCT IS ABOUT ?</string>
@@ -57,8 +56,6 @@ Cancer Life Shield is available at a minimum premium of PHP 2,000 a year.</strin
 Health 100 protects you and your loved ones from the expenses and loss of income when you get sick. It provides comprehensive hospital benefits, including coverage for daily hospitalization.</string>
 
 
-
-
     <string name="active_family_provider">\t You want to be healthy and be around so you can provide what’s best for your family. For you, giving your best means that you are able to provide for them no matter what happens.
 Now, you can have a protection and wellness plan that will help you live confidently and worry-free with Active Family Provider.</string>
     <string name="aia_critical_protect_100">\t In order to give your family the utmost protection for them and their future, you need a plan that protects you too. Stay one step ahead with AIA Critical Protect 100 -- a plan that protects you against 100 critical illnesses, from age 0 to 100. Further secure and protect your future and improve your coverage by adding a Gender-Specific Cancer rider and a Recovery Benefit rider.
@@ -80,8 +77,6 @@ Philam Lifes Credit Life Prime is a comprehensive and customizable credit life p
 Philam Lifes Group Life Classic is a flexible product that helps secure the welfare of your employees with its customizable life, accident, disability and health benefits.</string>
     <string name="buddyguard">Insuring those who put their lives on the line to protect others is a job of a good employer. Give your security personnel peace of mind knowing that someone is watching over them.
 Philam Lifes Buddyguard offers life and accident protection for those who safeguard our community.</string>
-
-
 
 
 </resources>

@@ -1,25 +1,32 @@
-package redeye.ghostofwar.philamlife.Classes.Fragments;
+package redeye.ghostofwar.philamlife.Classes.Cal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import redeye.ghostofwar.philamlife.R;
 
-public class calculator extends AppCompatActivity {
-CheckBox a, b , c , d, e , f;
-int aa = 54000, bb = 40000,cc = 54000,dd = 60000,ee= 54500,ff= 58000;
-TextView total;
+public class cal_live_a_healthier_longer_and_better_life extends AppCompatActivity {
+    CheckBox a, b , c , d, e , f;
+    int aa = 54000, bb = 40000,cc = 54000,dd = 60000,ee= 54500,ff= 58000;
+    TextView total;
+    RadioButton Yearly, Monthly;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.cal_live_a_healthier_longer_and_better_life);
-a =  findViewById(R.id.a);
+        Yearly = findViewById(R.id.yearly);
+        Monthly = findViewById(R.id.monthly);
+
+
+        a =  findViewById(R.id.a);
         b =  findViewById(R.id.b);
         c =  findViewById(R.id.c);
         d =  findViewById(R.id.d);
@@ -52,6 +59,10 @@ a =  findViewById(R.id.a);
 
             }
         });
+
+
+
+
 
 
         c.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -111,6 +122,6 @@ a =  findViewById(R.id.a);
 
 
 
-    }
 
+    }
 }

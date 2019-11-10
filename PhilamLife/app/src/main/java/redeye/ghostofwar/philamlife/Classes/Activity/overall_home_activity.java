@@ -30,6 +30,7 @@ import redeye.ghostofwar.philamlife.Classes.Fragments.fragment_home;
 import redeye.ghostofwar.philamlife.Classes.Fragments.fragment_profile;
 import redeye.ghostofwar.philamlife.Classes.Fragments.fragment_support;
 import redeye.ghostofwar.philamlife.Classes.Fragments.fragment_wallet;
+import redeye.ghostofwar.philamlife.Classes.Fragments.insurance_product;
 import redeye.ghostofwar.philamlife.Classes.Home.datamine_adapter;
 import redeye.ghostofwar.philamlife.Classes.Home.home_datamine_costructor;
 import redeye.ghostofwar.philamlife.Classes.Home.home_services_content_adapter;
@@ -160,6 +161,9 @@ TextView whereiam;;
                 }
                 case R.id.feed_navigation_create: {
 
+
+                    Intent a = new Intent (overall_home_activity.this, insurance_product.class);
+                    startActivity(a);
 
 
                 }
